@@ -3,26 +3,10 @@
 /* eslint prefer-arrow-callback: 'off' */
 
 var oc = oc || {};
+import $ from 'jquery';
+import '../vendor/l';
 
-(function(root, factory) {
-  'use strict';
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module
-    define(['exports', 'jquery'], function(exports, $) {
-      $.extend(exports, root.oc);
-      factory((root.oc = exports), $, root.ljs, root.document, root.window);
-    });
-  } else if (
-    typeof exports === 'object' &&
-    typeof exports.nodeName !== 'string'
-  ) {
-    // Common JS
-    factory(exports, require('jquery'), root.ljs, root.document, root.window);
-  } else {
-    // Browser globals
-    factory((root.oc = oc), root.$, root.ljs, root.document, root.window);
-  }
-})(this, function(exports, $, ljs, $document, $window) {
+function factory() {
   'use strict';
   // jshint ignore:line
   // public variables
@@ -622,5 +606,7 @@ var oc = oc || {};
   oc.ready(oc.renderUnloadedComponents);
 
   // expose public variables and methods
-  exports = oc;
-});
+  return oc;
+}
+
+module.exports = factory();

@@ -28,6 +28,7 @@
     "saucelabs": "grunt sauce",
     "test": "grunt test",
     "build": "grunt build",
+    "webpack": "webpack",
     "lint": "eslint .",
     "precommit": "lint-staged",
     "prepublish": "npm run build"
@@ -53,6 +54,7 @@
     "grunt-karma": "^2.0.0",
     "husky": "^0.14.3",
     "jasmine-core": "^2.5.1",
+    "jest": "^22.4.2",
     "karma": "^1.3.0",
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.2",
@@ -64,6 +66,8 @@
     "phantomjs-prebuilt": "^2.1.12",
     "prettier-eslint-cli": "^4.1.1",
     "sinon": "^4.2.2",
-    "uglify-js": "2.6.4"
+    "uglify-js": "2.6.4",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9"
   }
 }

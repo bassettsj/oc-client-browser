@@ -4,3 +4,7 @@ npm-debug.log
 node_modules
 coverage
 dist
+lib
+
+# Ignore Yarn Lock Filesa
+yarn.lock
